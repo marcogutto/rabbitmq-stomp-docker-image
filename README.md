@@ -1,0 +1,1 @@
+# rabbitmq-stomp-docker-image
