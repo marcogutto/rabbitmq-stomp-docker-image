@@ -3,7 +3,7 @@ services:
   rabbitmq:
     image: "marcogutto/rabbitmq-stomp:3.8.5-management"
     networks:
-      - forzapp-api
+      - rabbitmq
     ports:
       - "5671:5671"
       - "15672:15672"
@@ -15,5 +15,5 @@ services:
       retries: 10
 
 networks:
-  forzapp-api:
+  rabbitmq:
     driver: bridge
