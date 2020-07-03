@@ -1,0 +1,19 @@
+version: '3'
+services:
+  rabbitmq:
+    image: "marcogutto/rabbitmq-stomp:3.8.3-management"
+    networks:
+      - forzapp-api
+    ports:
+      - "5671:5671"
+      - "15672:15672"
+      - "61613:61613"
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 20s
+      timeout: 5s
+      retries: 10
+
+networks:
+  forzapp-api:
+    driver: bridge
