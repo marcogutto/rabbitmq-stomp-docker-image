@@ -1,6 +1,6 @@
-FROM rabbitmq:3.9.26-management
+FROM rabbitmq:3.11.4-management
 
-ENV RABBITMQ_VM_MEMORY_HIGH_WATERMARK 1024MiB
+COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
 
 RUN rabbitmq-plugins enable --offline rabbitmq_stomp 
 
