@@ -1,4 +1,4 @@
-FROM rabbitmq:3.8.14-management
+FROM rabbitmq:3.9.26-management
 
 ENV RABBITMQ_VM_MEMORY_HIGH_WATERMARK 1024MiB
 
